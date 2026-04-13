@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Spotify Bot</string>
+    <string name="accessibility_service_description">Automates Spotify playback for bot sessions.</string>
+    <!--
+      Outbound WebSocket URL (wss:// recommended). Phone opens this connection to your backend —
+      no inbound TCP port on the device.
+      Override at runtime via SharedPreferences key "backend_ws_url" or MainActivity intent extra.
+    -->
+    <!-- Local dev: Mac IP + uvicorn port; path must match FastAPI @app.websocket (backend uses /ws/device). -->
+    <string name="ws_server_url" translatable="false">ws://192.168.1.53:8000/ws/device</string>
+    <!-- Must match DEVICE_SHARED_SECRET in backend .env (or clear that env var for no auth in dev). -->
+    <string name="default_device_auth_token" translatable="false">emulator-device-secret-2026</string>
+
+    <string name="main_open_accessibility_settings">Open accessibility settings</string>
+    <string name="main_start_background_connection">Start background connection</string>
+    <string name="main_need_a11y_first">Turn on Spotify Bot in accessibility first (use the button above), then tap here again.</string>
+    <string name="main_already_started">Background connection already started.</string>
+    <string name="main_a11y_toast">In the list, find Spotify Bot (under Downloaded / installed apps) and turn it ON, then come back here.</string>
+    <string name="main_title_setup">Spotify Bot setup</string>
+    <string name="main_a11y_hint">Step 1: Open accessibility settings and turn Spotify Bot ON. Step 2: Tap the second button below.</string>
+    <string name="main_a11y_status_on">Accessibility: ON</string>
+    <string name="main_a11y_status_off">Accessibility: OFF — tap the button below</string>
+</resources>
